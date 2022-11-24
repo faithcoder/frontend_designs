@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Background Color: <span class="color">#111222</span></h2>
+        <br>
+        <button type="button" class="btn" id="change-btn">Change the color</button>
+    </div>
+
+    <script>
+        const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"]
+        const btn = document.getElementById("change-btn")
+        const color = document.querySelector(".color")
+
+        btn.addEventListener("click", function() {
+            let hexColor = "#"
+            for (i = 0; i < 6; i++) {
+                hexColor += hex[getRandomColor()]
+            }
+            color.textContent = hexColor
+            document.body.style.backgroundColor = hexColor
+        })
+
+        function getRandomColor() {
+            return Math.floor(Math.random() * hex.length)
+        }
+    </script>
+</body>
+
+</html>
