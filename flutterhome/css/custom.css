@@ -1,0 +1,138 @@
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media (min-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+        width: auto;
+        height: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .fullscreen-bg {
+        background-color: white;
+    }
+
+    .fullscreen-bg__video {
+        display: none;
+    }
+}
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/GothamRounded-Book.eot');
+    src: url('../fonts/GothamRounded-Book.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GothamRounded-Book.woff') format('woff'),
+    url('../fonts/GothamRounded-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family: "Gotham" !important;
+}
+section{
+    padding: 50px 0;
+    background-color: white;
+}
+#header{
+    line-height: 50px;
+}
+#header,#header a,#header li{
+    background-color: transparent;
+    color: white;
+}
+#hero{
+    position: relative;
+    background-color: rgba(41,128,185 ,0.6);
+}
+#service{
+    background: #F5FAF9;
+}
+.nav-logo span{
+    font-size: 24px;
+}
+.btn-default-dark{
+    background-color: black !important;
+    border-radius: 20px;
+}
+#app-store{
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+}
+#app-store img{
+    height: 36px;
+}
+#app-store a {
+    border: 1px solid white;
+    border-radius: 5%;
+}
+#app-store .label {
+     float:right;
+    font-size: 18px;
+}
+div .slider-text h2{
+    text-transform: uppercase;
+    font-size: 100px;
+}
+nav.sticky{
+    position: fixed;
+    /*background-color: rgba(41,128,185 ,0.9);*/
+    background-color: white;
+    border-color: #e0e0e0 !important;
+    border-bottom: 1px solid;
+    color:#3F4443;
+    top: -150px;
+    left: 0;
+    width: 100%;
+    z-index:9000;
+    padding: 10px 5px;
+    border-radius: 0px;
+    -webkit-transform: translateY(150px);
+    -moz-transform: translateY(150px);
+    transform: translateY(150px);
+    -webkit-transition: -webkit-transform .2s ease-in;
+    -moz-transition: -moz-transform .2s ease-in;
+    transition: transform .2s ease-in;
+}
+#header ul li a{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#header ul.sticky li a{
+    color:#3F4443 !important;
+}
+.sticky .block-right {
+    margin-right: 10px;
+}
+.sticky .btn-default-dark{
+    border: 2px solid rgba(41,128,185 ,1);
+    background-color: transparent !important;
+    color: rgba(41,128,185 ,1) !important;
+}
+.sticky .btn-default-dark a{
+    color: rgba(41,128,185 ,1) !important;
+}
+.sticky .nav-logo{
+    border-color: #e0e0e0 !important;
+    border-right: 1px solid;
+}
